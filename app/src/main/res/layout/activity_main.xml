@@ -41,7 +41,16 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:textAllCaps="false"
+        android:layout_margin="20px"
         android:id="@+id/submitbtn"
+        android:background="#A583E2"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View all"
+        android:textAllCaps="false"
+        android:layout_margin="20px"
+        android:id="@+id/viewbtn"
         android:background="#A583E2"/>
 
 </LinearLayout>

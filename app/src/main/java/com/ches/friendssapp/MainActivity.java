@@ -2,6 +2,7 @@ package com.ches.friendssapp;
 
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -26,7 +27,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
      EditText e1,e2,e3,e4;
-     AppCompatButton b1;
+     AppCompatButton b1,b2;
     @SuppressLint("MissingInflatedId")
     String apiurl="https://friendsapi-re5a.onrender.com/adddata";
     @Override
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         e3=(EditText) findViewById(R.id.nickname);
         e4=(EditText) findViewById(R.id.describe);
         b1=(AppCompatButton)findViewById(R.id.submitbtn);
+        b2=(AppCompatButton)findViewById(R.id.viewbtn);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +84,13 @@ public class MainActivity extends AppCompatActivity {
 
                 //Toast.makeText(getApplicationContext(),getName+getFname+getNickame+getDescribe,Toast.LENGTH_SHORT).show();
 
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),com.ches.friendssapp.View.class);
+                startActivity(i);
             }
         });
     }
